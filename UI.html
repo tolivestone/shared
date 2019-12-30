@@ -1,0 +1,184 @@
+<style>
+	/*
+	 * Place your styles here. Beware that CSS styles affect all
+	 * HTML elements in the page so you need to provide appropriate
+	 * classes or IDs to identify the elements being styled.
+	 */
+
+	#mainTextContent {
+		position: fixed;
+		top: 30%;
+		width: 35%;
+		background: transparent;
+	}
+
+	.textContent div {
+		padding: 0.5em 0;
+	}
+
+	#title div {
+		margin: 0 0 0.2em 0;
+	}
+	
+	.textContent #title .title_small {
+		padding: 0;
+		margin: 0;
+	}
+
+	#info {
+		position: fixed;
+		top: 20%;
+	}
+
+	#info button  {
+		min-width: 0px;
+	}
+
+	#hostSpeech {
+		font-size: 1.25em;
+		background: transparent;
+	}
+
+	.hint {
+		font-size: 1em;
+		opacity: 0.7;
+	}
+
+	#micButton {
+		width: 36px;
+		height: 36px;
+		position: fixed;
+		top: 85%;
+		
+		/* Prevent long press from selecting element. */
+		-webkit-user-select:none;
+		-khtml-user-select:none;
+		-moz-user-select:none;
+		-ms-user-select:none;
+		user-select:none;
+		
+		/* Prevent special context menu from openning when long pressing on images
+	 	* and other elements. */
+		-webkit-touch-callout:none;
+		
+	/* Prevent browser panning and zooming when interacting with this element. */
+		touch-action: none;
+	}
+
+	#recordMic {
+		padding: auto;
+		margin: auto;
+		text-align: center;
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+		position: relative;
+		width: 100%;
+	}
+
+	#recordMic img {
+		width: 40px;
+		height:40px;
+		margin-top: 20%;
+		
+
+	}
+
+	#micButton #recordMic img:hover {
+		filter: invert(100%);
+	}
+
+	.ring {
+		z-index: -1;
+		position: absolute;
+		top: 50%;
+		transform: scale(.25);
+		animation-iteration-count: infinite;
+	}
+
+	.ping1 {
+		top: -30px;
+		left: -30px;
+		border: solid #0070BA 48px;
+		border-radius: 50%;
+		content: "";
+		animation-duration: 3s;
+		animation-name: ping1;
+	}
+
+	.ping2 {
+		top: -30px;
+		left: -30px;
+		border: solid #0070BA 48px;
+		border-radius: 50%;
+		content: "";
+		animation-duration: 3s;
+		animation-name: ping2;
+	}
+
+	.ping3 {
+		top: -30px;
+		left: -30px;
+		border: solid #0070BA 48px;
+		border-radius: 50%;
+		content: "";
+		animation-duration: 3s;
+		animation-name: ping3;
+	}
+
+	@keyframes ping1 {
+		0% {
+			transform: scale(.25);
+			opacity: 1;
+		}
+		100% {
+			transform: scale(3);
+			opacity: 0;
+		}
+	}
+
+	@keyframes ping2 {
+		0% {
+			transform: scale(0.25);
+			opacity: 1;
+		}
+		33% {
+			transform: scale(0.25);
+			opacity: 1;
+		}
+		100% {
+				transform: scale(2);
+				opacity: 0;
+			}
+	}
+
+	@keyframes ping3 {
+		0% {
+			transform: scale(0.25);
+			opacity: 1;
+		}
+		66% {
+			transform: scale(0.25);
+			opacity: 1;
+		}
+		100% {
+			transform: scale(1);
+			opacity: 0;
+		}
+	}
+	
+</style>
+
+<div class="UI">
+	<div id="micButton" class="iconButton">
+		<div id="recordMic" class="iconBlack show">
+			<div id="ring1"></div>
+			<div id="ring2"></div>
+			<div id="ring3"></div>
+			
+			<img data-id="8e08ce1ee9051306acd5150725409a68ad63986d.png"/>
+			
+			<!-- Drop a mic icon image on the Images section on the left panel of the Text Editor to create an img tag. Then move the img tag here -->
+		</div>
+	</div>
+</div>
